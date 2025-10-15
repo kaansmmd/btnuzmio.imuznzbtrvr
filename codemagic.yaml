@@ -1,18 +1,1 @@
-workflows:
-  ios-workflow:
-    name: iOS Full-Screen Apk Runner (No IP)
-    max_build_duration: 60
-    environment:
-      vars: {}
-      flutter: false
-      xcode: latest
-      cocoapods: default
-    scripts:
-      - name: Install dependencies
-        script: |
-          echo "No dependencies needed for SwiftUI project"
-      - name: Build iOS app
-        script: |
-          xcodebuild -project ApkRunner.xcodeproj                              -scheme ApkRunner                              -configuration Release                              -sdk iphoneos                              CODE_SIGN_IDENTITY="iPhone Distribution"                              CODE_SIGN_STYLE="Automatic"                              DEVELOPMENT_TEAM="$DEVELOPMENT_TEAM"                              BUILD_DIR="$CM_BUILD_DIR/build"
-    artifacts:
-      - build/Release-iphoneos/ApkRunner.ipa
+null
